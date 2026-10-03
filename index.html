@@ -9,15 +9,17 @@
 </head>
 <body>
 
+    <span id="clickAttempts">Number of Click Attempts: 0</span>
+
     <h2>LightBulb</h2>
 
     <div class="container">
 
-        <center><i class="fa-regular fa-lightbulb" id="lightBulb"></i></center>
+        <i class="fa-regular fa-lightbulb" id="lightBulb"></i><br>
 
         <audio id="clickSound" src="mixkit-classic-click-1117.wav"></audio>
-        <button id="onSwitch" onclick="turnOn()">Turn On</button>
 
+        <button id="onSwitch" onclick="turnOn()">Turn On</button>
         <button id="offSwitch" onclick="turnOff()">Turn Off</button>
 
     </div>

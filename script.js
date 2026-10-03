@@ -2,11 +2,11 @@ let isBulbOn = document.getElementById("lightBulb");
 let onSwitch = document.getElementById("onSwitch");
 let offSwitch = document.getElementById("offSwitch");
 let sound = document.getElementById("clickSound");
-let numberofClicks = document.getElementById("clickAttempts");
+let clickAttempts = 0;
 
 function turnOn() {
 
-    onSwitch.addEventListener("click", function() {
+    onSwitch.addEventListener("click", () => {
 
         document.getElementById("lightBulb").style.color = `yellow`;
 
@@ -16,11 +16,15 @@ function turnOn() {
 
     });
 
+    document.getElementById("clickAttempts").innerHTML = `Number of Click Attempts: ${clickAttempts}`;
+
+    console.log(clickAttempts++);
+
 };
 
 function turnOff() {
 
-    offSwitch.addEventListener("click", function() {
+    offSwitch.addEventListener("click", () => {
 
         document.getElementById("lightBulb").style.color = `black`;
 
@@ -29,5 +33,9 @@ function turnOff() {
         sound.play();
 
     });
-};
 
+    document.getElementById("clickAttempts").innerHTML = `Number of Click Attempts: ${clickAttempts}`;
+
+    console.log(clickAttempts++);
+
+};
